@@ -24,5 +24,5 @@ RUN git clone https://github.com/vanchinathan83/ninjablog.git
 EXPOSE 5000
 EXPOSE 27017
 
-ENTRYPOINT ["/bin/bash", "/start.sh"]
+ENTRYPOINT ["/bin/bash", "/start.sh", "/bin/bash"]
 

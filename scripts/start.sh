@@ -1,5 +1,5 @@
 #!/bin/bash
 
-mongod --logpath /var/log/mongod.log --dbpath=/data/mongodb &
-
+mongod --dbpath=/opt/data/mongodb & sleep 10 
 python ninjablog/blog.py
+
