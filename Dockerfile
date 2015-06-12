@@ -2,10 +2,7 @@ FROM ubuntu:14.04
 MAINTAINER Vanchinathan<ac.vanchinathan@gmail.com>
 
 RUN sudo apt-get update
-RUN sudo apt-get install -y  python
-RUN sudo apt-get install -y wget
-RUN sudo apt-get install -y mongodb
-RUN sudo apt-get install -y git
+RUN sudo apt-get install -y python wget curl mongodb git
 
 RUN mkdir -p /opt/data/mongodb
 RUN mkdir -p /var/log
@@ -24,5 +21,5 @@ RUN git clone https://github.com/vanchinathan83/ninjablog.git
 EXPOSE 5000
 EXPOSE 27017
 
-ENTRYPOINT ["/bin/bash", "/start.sh", "/bin/bash"]
+ENTRYPOINT ["/bin/bash", "/start.sh"]
 
